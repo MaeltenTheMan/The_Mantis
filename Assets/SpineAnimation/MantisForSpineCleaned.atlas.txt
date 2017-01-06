@@ -1,0 +1,69 @@
+
+MantisForSpineCleaned.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ClawBackFarbe
+  rotate: true
+  xy: 507, 275
+  size: 228, 248
+  orig: 228, 248
+  offset: 0, 0
+  index: -1
+ClawFrontFarbe
+  rotate: false
+  xy: 229, 261
+  size: 276, 242
+  orig: 276, 242
+  offset: 0, 0
+  index: -1
+HeadFarbe
+  rotate: false
+  xy: 2, 109
+  size: 225, 394
+  orig: 225, 394
+  offset: 0, 0
+  index: -1
+Leg1FrontFarbe
+  rotate: false
+  xy: 233, 2
+  size: 174, 115
+  orig: 174, 115
+  offset: 0, 0
+  index: -1
+Leg2BackFarbe
+  rotate: true
+  xy: 757, 281
+  size: 77, 163
+  orig: 77, 163
+  offset: 0, 0
+  index: -1
+Leg3FrontFareb
+  rotate: false
+  xy: 512, 124
+  size: 177, 149
+  orig: 177, 149
+  offset: 0, 0
+  index: -1
+Leg4BackFarbe
+  rotate: true
+  xy: 2, 6
+  size: 101, 229
+  orig: 101, 229
+  offset: 0, 0
+  index: -1
+overBodyFarbe
+  rotate: true
+  xy: 757, 360
+  size: 143, 234
+  orig: 143, 234
+  offset: 0, 0
+  index: -1
+underbodyFarbe
+  rotate: false
+  xy: 229, 119
+  size: 281, 140
+  orig: 281, 140
+  offset: 0, 0
+  index: -1
