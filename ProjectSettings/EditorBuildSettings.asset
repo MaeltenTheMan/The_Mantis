@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/StartScene.unity
   - enabled: 1
+    path: Assets/ZoomInScene.unity
+  - enabled: 1
+    path: Assets/MainMenu.unity
+  - enabled: 1
     path: Assets/GameScene.unity

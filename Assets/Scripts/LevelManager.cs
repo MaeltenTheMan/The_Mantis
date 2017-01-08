@@ -20,6 +20,13 @@ public class LevelManager : MonoBehaviour
     public bool coroutineTop;
     public GameObject text;
 
+    //y placement der Ameisen
+    public float antsBot = -40.8f;
+    public float antsMid = 2.1f;
+    public float antsTop = 43.64f;
+
+
+
     // Use this for initialization
     void Start()
     {
@@ -73,19 +80,19 @@ public class LevelManager : MonoBehaviour
         int randi = Random.Range(1, 8);
            if(randi == 1)
            {
-            Instantiate(objectHere, new Vector3(Random.Range(-22f, 3.1f), 43.62f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(-22f, 3.1f), antsTop, 0), Quaternion.identity);
             }
            else if(randi == 2 || randi == 5)
            {
-            Instantiate(objectHere, new Vector3(Random.Range(-65.6f ,- 38.2f), 43.62f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(-65.6f ,- 38.2f), antsTop, 0), Quaternion.identity);
            }
            else if(randi == 3 || randi == 6)
            {
-            Instantiate(objectHere, new Vector3(Random.Range(-82f, -99), 43.62f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(-82f, -99), antsTop, 0), Quaternion.identity);
            }
            else if (randi == 4 || randi == 7)
         {
-            Instantiate(objectHere, new Vector3(Random.Range(13.7f, 110.7f), 43.62f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(13.7f, 110.7f), antsTop, 0), Quaternion.identity);
         }
     }
 
@@ -94,15 +101,15 @@ public class LevelManager : MonoBehaviour
         int randipopandi = Random.Range(1, 6);
         if (randipopandi == 1 || randipopandi ==5)
         {
-            Instantiate(objectHere, new Vector3(Random.Range(-94.5f, 5.4f), 2.66f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(-94.5f, 5.4f), antsMid, 0), Quaternion.identity);
         }
         else if (randipopandi == 2)
         {
-            Instantiate(objectHere, new Vector3(Random.Range(19.8f, 67), 2.66f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(19.8f, 67), antsMid, 0), Quaternion.identity);
         }
         else if (randipopandi == 3 || randipopandi == 4)
         {
-            Instantiate(objectHere, new Vector3(Random.Range(85.9f,110.7f), 2.66f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(85.9f,110.7f), antsMid, 0), Quaternion.identity);
         }  
     }
 
@@ -111,25 +118,25 @@ public class LevelManager : MonoBehaviour
            if(randilein == 1)
            {
             //vorm teleport up
-            Instantiate(objectHere, new Vector3(Random.Range(-94.5f, -50f), -40.2f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(-94.5f, -50f), antsBot, 0), Quaternion.identity);
             }
            else if(randilein == 2)
            {
-            Instantiate(objectHere, new Vector3(Random.Range(-35.2f ,- 7.5f), -40.2f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(-35.2f ,- 7.5f), antsBot, 0), Quaternion.identity);
             }
            else if(randilein == 3)
            {
-            Instantiate(objectHere, new Vector3(Random.Range(3.2f, 23f), -40.2f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(3.2f, 23f), antsBot, 0), Quaternion.identity);
            }
            else if (randilein == 4)
             {
             //bei teleport down
-            Instantiate(objectHere, new Vector3(Random.Range(38f, 84.1f),-40.2f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(38f, 84.1f), antsBot, 0), Quaternion.identity);
            }
         else if (randilein == 5)
         {
             //bei teleport down
-            Instantiate(objectHere, new Vector3(Random.Range(97f, 110.7f), -40.2f, 0), Quaternion.identity);
+            Instantiate(objectHere, new Vector3(Random.Range(97f, 110.7f), antsBot, 0), Quaternion.identity);
         }
     }
 
@@ -142,7 +149,7 @@ public class LevelManager : MonoBehaviour
         if (randi == 1)
         {
 
-            Instantiate(prefabWarri, new Vector3(-101, 2.7f, -201), Quaternion.identity);
+            Instantiate(prefabWarri, new Vector3(-101, 2.2f, -201), Quaternion.identity);
         }
        
         else if (randi == 2)
@@ -155,7 +162,7 @@ public class LevelManager : MonoBehaviour
         int randi = Random.Range(1, 3);
          if (randi == 1)
         {
-            Instantiate(prefabWarri, new Vector3(123.8f, 2.7f, -201), Quaternion.identity);
+            Instantiate(prefabWarri, new Vector3(123.8f, 2.2f, -201), Quaternion.identity);
         }
         else if (randi == 2)
         {
@@ -169,11 +176,11 @@ public class LevelManager : MonoBehaviour
         int randi = Random.Range(1, 3);
         if (randi == 1)
         {
-            Instantiate(prefabWarri, new Vector3(68.5f, 2.7f, -201), Quaternion.identity);
+            Instantiate(prefabWarri, new Vector3(55.5f, 2.2f, -201), Quaternion.identity);
         }
         else if (randi == 2)
         {
-            Instantiate(prefabJumper, new Vector3(68.5f, 5.7f, -201), Quaternion.identity);
+            Instantiate(prefabJumper, new Vector3(55.5f, 5.7f, -201), Quaternion.identity);
         }
 
     }
@@ -183,11 +190,11 @@ public class LevelManager : MonoBehaviour
         int randi = Random.Range(1, 3);
         if (randi == 1)
         {
-            Instantiate(prefabWarri, new Vector3(95.5f, 2.7f, -201), Quaternion.identity);
+            Instantiate(prefabWarri, new Vector3(89.5f, 2.2f, -201), Quaternion.identity);
         }
         else if (randi == 2)
         {
-            Instantiate(prefabJumper, new Vector3(95.5f, 5.7f, -201), Quaternion.identity);
+            Instantiate(prefabJumper, new Vector3(89.5f, 5.7f, -201), Quaternion.identity);
         }
 
     }
@@ -244,7 +251,7 @@ public class LevelManager : MonoBehaviour
     IEnumerator LifeAmeisenSpawn()
     {
 
-        //Hier bitte noch eine Abfrage, wo sich der player gerade befindet, in diesem level kann kein life 
+        
         while (true)
         {
             yield return new WaitForSeconds(createNewLifeAnt);

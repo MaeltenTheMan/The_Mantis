@@ -14,16 +14,15 @@ public class FpsCreator : MonoBehaviour {
 
     void OnGUI()
     {
-       
-        
+              
             int w = Screen.width, h = Screen.height;
 
             GUIStyle style = new GUIStyle();
 
             Rect rect = new Rect(0, 0, w, h * 2 / 100);
-            style.alignment = TextAnchor.UpperLeft;
+            style.alignment = TextAnchor.UpperRight;
             style.fontSize = h * 2 / 100;
-            style.normal.textColor = new Color(0.0f, 0.0f, 0.5f, 1.0f);
+            style.normal.textColor = new Color(1.0f, 1.0f, 0.0f, 0.0f); //to show 0.5 , 1.0f am ende
             float msec = deltaTime * 1000.0f;
             float fps = 1.0f / deltaTime;
 

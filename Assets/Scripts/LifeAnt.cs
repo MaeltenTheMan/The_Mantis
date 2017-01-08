@@ -11,7 +11,7 @@ public class LifeAnt : MonoBehaviour {
     void Start()
     {
         StartCoroutine(lifeEnds());
-        Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+      
        
     }
     void OnCollisionEnter2D(Collision2D col)

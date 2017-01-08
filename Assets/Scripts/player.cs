@@ -61,11 +61,7 @@ public class player : MonoBehaviour {
         }
         else if (mantisIsDead == true)
         {   
-               
-                  
-
-            
-            gameObject.transform.Translate(new Vector2(0, -0.36f));
+            gameObject.transform.Translate(new Vector2(0, -1f));
         }
          
     }
@@ -88,11 +84,9 @@ public class player : MonoBehaviour {
             else if (teleport == true)
         {
             rend.transform.Translate(Vector2.right * Time.deltaTime * 0);
-            Debug.Log("teleport");
+            
         }
        
-        
-      
     }
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -246,9 +240,6 @@ public class player : MonoBehaviour {
             lvlManager.GetComponent<LevelManager>().coroutineMid = false;
             runsRight = false;
 
-            //gameObject.GetComponent<Collider2D>().size = Vector2()
-            //   lvlManager.GetComponent<LevelManager>().LoadLevel3();
-
         } //teleport wieder in mittlere Ebene
         else if (triggerActive4 && (Input.GetKey("w")))
         {
@@ -275,7 +266,7 @@ public class player : MonoBehaviour {
     //Lässt das spiel einen moment warten, wenn Mantis gestorben ist
     IEnumerator TimerAfterDeath()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2.3f);
         SceneManager.LoadScene(1);
     }
     public void doSlider()
@@ -295,6 +286,7 @@ public class player : MonoBehaviour {
             StartCoroutine(TimerAfterDeath());
             Animator gameOverAnimator = gameOverScreen.GetComponent<Animator>();
             gameOverAnimator.SetTrigger("gameOver");
+            
            
         }
         //camshaker 
@@ -308,11 +300,11 @@ public class player : MonoBehaviour {
         teleport = true;
         
 
-        for (int i = 0; i<7; i++)
+        for (int i = 0; i<14; i++)
         {
           
-                yield return new WaitForSeconds(0.05f);
-                myCam.orthographicSize = myCam.orthographicSize -2;
+                yield return new WaitForSeconds(0.025f);
+                myCam.orthographicSize = myCam.orthographicSize -1;
             
             
         }
@@ -326,13 +318,13 @@ public class player : MonoBehaviour {
 
     IEnumerator changeSmoothingBack()
     {
-        for (int i = 0; i <7; i++)
+        for (int i = 0; i <14; i++)
         {
 
 
 
-            yield return new WaitForSeconds(0.05f);
-            myCam.orthographicSize = myCam.orthographicSize + 2;
+            yield return new WaitForSeconds(0.025f);
+            myCam.orthographicSize = myCam.orthographicSize + 1;
 
         }
 
